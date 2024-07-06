@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@font-face {
+  font-family: sahel;
+  src: url(./font/Sahel-Bold.ttf);
+}
+@font-face {
+  font-family: sahel-main;
+  src: url(./font/Sahel-WOL.ttf);
+}
+@font-face {
+  font-family: laris;
+  src: url(./font/Laris\ Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  direction: ltr;
+  background-image: url(./prac-img/1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+.sec-container {
+  width: 80%;
+  height: 80vh;
+  margin: 60px auto;
+  border-radius: 20px;
+  background-color: #f3c4d4;
+  opacity: 0.95;
+  backdrop-filter: blur(5px);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 999;
+}
+header h1 {
+  color: #fefcff;
+  font-family: "Playfair Display SC", serif;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  font-family: laris;
+}
+.navbar {
+  display: flex;
+  flex: 0 1 400px;
+}
+.navbar li a {
+  color: #fefcff;
+  margin: 0 20px;
+  transition: all 0.4s ease-in;
+  cursor: pointer;
+  font-family: sahel;
+  font-size: 15px;
+}
+.navbar li a:hover {
+  color: #d74c71;
+}
+.navbar li a {
+  color: #fff;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+.content img {
+  width: 350px;
+  height: 350px;
+}
+.content-left {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.content-left h2 {
+  font-size: 35px;
+  color: #fefcff;
+  font-family: sahel-main;
+}
+.content-left p {
+  text-align: justify;
+  margin: 5px 0;
+  color: #fefcff;
+  font-family: sahel-main;
+  font-size: 12px;
+}
+.content-left button {
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #fefcff;
+  font-family: sahel;
+  font-size: smaller;
+  transition: all 0.4s ease-in;
+}
+.content-left button a {
+  color: #d74c71;
+}
+.content-left button:hover {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+/****media queries****/
+
+@media only screen and (max-width: 980px) {
+  .content {
+    justify-content: center;
+    padding: 0px 50px;
+  }
+  .content-left {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .content img {
+    display: none;
+  }
+  .content-left h2 {
+    text-align: center;
+  }
+  .content-left p {
+    text-align: center;
+    font-size: 10px;
+  }
+  .content-left button {
+    margin: 12px 0;
+  }
+}
+@media only screen and (max-width: 905px) {
+  header {
+    flex-direction: column;
+  }
+  header h1 {
+    padding-bottom: 10px;
+  }
+  .navbar {
+    flex-basis: 55px;
+  }
+  .navbar li a {
+    margin: 0 10px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .content-left button {
+    margin: 10px 0;
+  }
+  .content-left h2 {
+    font-size: 30px;
+  }
+  .content-left p {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .content {
+    padding: 0px 50px;
+  }
+}
+@media only screen and (max-width: 636px) {
+  .navbar li a {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .navbar li a {
+    font-size: 8px;
+  }
+}
